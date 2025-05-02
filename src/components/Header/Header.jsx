@@ -2,10 +2,11 @@ import React, {useRef, useEffect} from 'react'
 import './header.css'
 import { Container, Row } from "reactstrap"
 
+import { useSelector } from 'react-redux'
 import {motion} from 'framer-motion'
 
 import logo from '../../assets/images/eco-logo.png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import userIcon from '../../assets/images/user-icon.png'
 
 const nav__links = [
@@ -26,8 +27,10 @@ const nav__links = [
 const Header = () => {
 
     const headerRef = useRef(null);
+    const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
     const menuref = useRef(null)
+    const navigate = useNavigate()
 
     const stickyHeaderFunc = () => {
         window.addEventListener('scroll', ()=>{
@@ -48,6 +51,11 @@ const Header = () => {
 
 
     const menuToggle = ()=> menuref.current.classList.toggle('active__menu')
+
+    const navigateToCart = () => {
+        navigate('/cart')
+    }
+
   return <header className="header" ref={headerRef}>
     <Container>
         <Row>
@@ -69,19 +77,16 @@ const Header = () => {
                         ))}
                     </ul>
                 </div>
-
-
                 <div className="nav__icons">
-
                     <span className='fav__icon'>
-                        <i class="ri-heart-line"></i>
-                        
-                    </span>
-                    <span className="cart__icon">
-                        <i class="ri-shopping-bag-line"></i>
-                        
+                        <i className="ri-heart-line"></i>
+                            <span className="badge">2</span>
                     </span>
 
+                    <span className="cart__icon" onClick={navigateToCart}>
+                        <i className="ri-shopping-bag-line"></i>
+                            <span className="badge">{totalQuantity}</span>
+                    </span>
                     <span>
                         <motion.img whileTap={{scale: 1.3}} src={userIcon} alt="" />
                     </span>

@@ -1,0 +1,123 @@
+.product__details{
+    margin-top: 50px;
+}
+
+.product__details h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product__rating span i{
+    color: coral;
+}
+
+.product__rating p span{
+    color: coral;
+    font-weight: 400px;
+}
+
+.product__price{
+    font-style: 1.2rem;
+    font-weight: 500px;
+}
+
+.product-image{
+    width: 100%;  /* Sesuaikan dengan container */
+    max-width: 400px;  /* Batasi ukuran maksimal */
+    height: auto;
+    object-fit: cover;
+}
+
+.buy__button {
+    background-color: var(--primary-color); /* Warna background */
+    color: white; /* Warna teks */
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold; /* Ketebalan font */
+    border-radius: 8px; /* Membuat sudut tombol lebih melengkung */
+    padding: 12px 24px; /* Ukuran padding untuk memperbesar tombol */
+    border: none; /* Menghilangkan border */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    transition: all 1s ease-in-out; /* Efek transisi */
+  }
+  
+  .buy__button:hover {
+    background-color: coral; /* Warna berubah saat hover */
+    transform: scale(1.05); /* Efek sedikit membesar saat hover */
+  }
+
+
+.tab__wrapper{
+    color: var(--primary-color);
+    font-weight: 100;
+    font-style: 2rem;
+    cursor: pointer;
+}
+
+.active__tab{
+    font-weight: 100;
+  }
+
+.tab__content p {
+    line-height: 30px;
+} 
+
+.review__wrapper ul li span{
+    color: coral;
+    font-weight: 500;
+}
+
+.review__wrapper ul li p{
+    margin-top: 10px;
+}
+
+.review__form{
+    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.review__form h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form__group input, textarea{
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+.form__group input:focus, .form__group textarea:focus{
+    outline: none;
+}
+
+.form__group{
+    margin-bottom: 30px;
+}
+
+.form__group span{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: coral;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.related__title{
+    margin-top: 65px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width:768px){
+    .product__details{
+        font-size: 1.3rem;
+    }
+    .rating__group{
+        column-gap: 0.5rem !important;
+    }
+}

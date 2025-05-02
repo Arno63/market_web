@@ -8,7 +8,7 @@
   --card-bg-03: #ceebe9;
   --card-bg-04: #e2f2b2;
   --primary-color: #0a1d37;
-  --hero-bg: #AC7849;
+  --hero-bg: #f8ffe5;
   --heading-fontSize: 2rem;
   --small-text-color: #999;
   --heading-text-color: #0a1d37;
@@ -56,7 +56,7 @@ a {
 }
 
 img{
-  width: 100px;
+  max-width: 100%;
 }
 
 section{
@@ -67,4 +67,12 @@ section{
   color: var(--primary-color);
   font-weight: 600;
   text-align: center;
+}
+.Toastify {
+  position: absolute !important;
+  width: auto !important;
+  height: auto !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 9999 !important;
 }
